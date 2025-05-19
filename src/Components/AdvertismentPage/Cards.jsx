@@ -3,17 +3,19 @@ import { cardContents } from "../../constants";
 
 export const Cards = () => {
   return (
-    <div className="w-full overflow-hidden bg-gradient-to-r from-black via-gray-900 to-black">
-      <h1 className='mt-8 text-3xl font-semibold text-center text-white'>
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800">
+      <div className="absolute top-0 left-0 z-0 w-full h-full pointer-events-none bg-gradient-to-r from-white/10 via-white/5 to-transparent opacity-20 animate-pulse" />
+
+      <h1 className="relative z-10 mt-8 text-3xl font-semibold text-center text-white">
         Your Internship Search Made Easy
       </h1>
 
-      <div className="flex justify-center p-8 mt-7">
+      <div className="relative z-10 flex justify-center p-8 mt-7">
         <div className="grid grid-cols-1 gap-y-6 gap-x-20 sm:grid-cols-2 md:grid-cols-3">
           {cardContents.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-10 bg-black border border-gray-300 shadow-xl w-80 rounded-2xl cardAnimation"
+              className="flex flex-col items-center p-10 transition-transform duration-300 border shadow-xl border-white/20 w-80 rounded-2xl backdrop-blur-md bg-white/10 bg-opacity-20 hover:scale-105"
             >
               <div className="flex items-center mb-4">
                 <div className="flex items-center justify-center p-4 mr-4 text-white border border-blue-300 rounded-full">
@@ -21,7 +23,7 @@ export const Cards = () => {
                 </div>
                 <h2 className="text-xl font-semibold text-white">{card.title}</h2>
               </div>
-              <p className="text-sm text-center text-gray-400">{card.content}</p>
+              <p className="text-sm text-center text-gray-300">{card.content}</p>
             </div>
           ))}
         </div>

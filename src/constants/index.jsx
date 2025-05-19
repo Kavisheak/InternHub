@@ -3,6 +3,8 @@ import { FiFilePlus } from "react-icons/fi";
 import { RiUserSearchLine } from "react-icons/ri";
 import { IoMegaphone } from "react-icons/io5";
 
+
+// for card contents
 export const cardContents = [
     { title: "Find Opportunities", content: "Search and filter through hundreds of internship opportunities that match your skills and interests", icon: <FaSearch /> },
     { title: "Manage Your Profile", content: "Create a standout profile highlighting your skills, experience, and educational background", icon: <FaRegUser /> },
